@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tom Stein Portfolio</title>
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -72,9 +72,20 @@
                     <h2 class="heading">Über mich</h2>
                 </div>
                 <div class="col-md-8">
-                    <p>
-                        Ich bin ein deutscher Schüler aus NRW. Derzeit bin ich 18 Jahre alt und bestrebe die allgemeine Hochschulreife im Bereich Mathematik & Informatik. Hobbymäßig arbeite ich für <a href="https://www.fantapptic.me/de" target="_blank">Fantapptic Apps</a>.
-                    </p>
+                    <p id="info_text"></p>
+                       
+                  
+                    <script type="text/javascript">
+                        function calculate_age(dob) { 
+                            var diff_ms = Date.now() - dob.getTime();
+                            var age_dt = new Date(diff_ms); 
+
+                            return Math.abs(age_dt.getUTCFullYear() - 1970);
+                        }
+
+                        // In JavaScript, the first month (January) is month number 0, so December returns month number 11.
+                        document.getElementById("info_text").innerHTML = "Ich bin ein deutscher Schüler aus NRW. Derzeit bin ich " + calculate_age(new Date(2001,1-1,8)) + " Jahre alt und bestrebe die allgemeine Hochschulreife im Bereich Mathematik & Informatik. Hobbymäßig arbeite ich für <a href=\"https://www.fantapptic.me/de\" target=\"_blank\">Fantapptic Apps</a>."  
+                    </script>
                 </div>
             </div>
         </div>
@@ -233,120 +244,120 @@
                     <div class="project-info">
                         <h3>Drinko Plinko</h3>
                         <p>
-                            Der etwas andere Flaschenöffner :) </br>
-                            Der Kronkorken fällt durch durch mehere Ebenen und trifft in einem der unteren Fächer auf. 
-                        </p>
-                        <a href="https://imgur.com/a/JkRvDHt" target="_blank">Bilder anzeigen</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/16x16RGBMatrix.png">
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>16x16 RGB LED Matrix</h3>
-                        <p>
-                            Diese Matrix wird von einem Teensy 3.6 mit 180MHz angesteuert. Zudem sind 3 TLC5940 LED Treiber ICs und 2 74CH595 Shiftregister verbaut.
-                            Die Matrix kann über das DMX Protokoll über WiFi gesteuert werden.
-                        </p>
-                        <a href="https://scholliyt.github.io/LED-Matrix-16x16/" target="_blank">Projekt anzeigen</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/10x10RGBMatrix.png">
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>10x10 RGB LED Matrix</h3>
-                        <p>
-                            Diese Matrix wurde mit mit 5 74CH595 Shiftregistern gebaut, welche von einem Tennsy 3.6 mit 180MHz gesteuert werden. 
-                            Derzeit ist eine 8 bit Farbtiefe auf jeder LED möglich.
-                        </p>
-                        <a href="https://github.com/ScholliYT/LedMatirx/blob/master/10x10/LedMatrixBaseCode/LedMatrixBaseCode.ino" target="_blank">Projekt anzeigen</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-            </div>
-        </div>
-    </div>
-    <!-- End #projects -->
-
-    <div id="skills">
-        <h2 class="heading">Fähigkeiten</h2>
-        <ul>
-            <li>Java</li>
-            <li>Android</li>
-            <li>Firebase</li>
-            <li>Flutter</li>
-            <li>C# (.Net)</li>
-            <li>Travis</li>
-            <li>Linux</li>
-            <li>Unity</li>
-            <li>Arduino (C/C++)</li>
-            <li>IoT</li>
-            <li>Raspberry Pi</li>
-            <li>Python</li>
-            <li>HTML</li>
-        </ul>
-    </div>
-    <!-- End #skills -->
-
-    <div id="contact">
-        <h2>Kontakt</h2>
-        <div id="contact-form">
-            <form method="POST" action="https://formspree.io/tom.ein.stein@t-online.de">
-                <input type="hidden" name="_subject" value="Kontaktanfrage von tomstein.me" />
-                <input type="email" name="_replyto" placeholder="Email" required>
-                <textarea name="message" placeholder="Nachricht" required></textarea>
-                <button type="submit">Senden</button>
-            </form>
-        </div>
-        <!-- End #contact-form -->
-    </div>
-    <!-- End #contact -->
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-5 copyright">
-                    <p>
-                        Copyright &copy; 2018 Tom Stein
+                        Der etwas andere Flaschenöffner :) </br>
+                        Der Kronkorken fällt durch durch mehere Ebenen und trifft in einem der unteren Fächer auf. 
                     </p>
+                    <a href="https://imgur.com/a/JkRvDHt" target="_blank">Bilder anzeigen</a>
                 </div>
-                <div class="col-sm-2 top">
-                    <span id="to-top">
-                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </span>
+                <!-- End .project-info -->
+            </div>
+            <!-- End .project -->
+
+            <div class="project shadow-large">
+                <div class="project-image">
+                    <img src="images/16x16RGBMatrix.png">
                 </div>
-                <div class="col-sm-5 social">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/ScholliYT" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://stackoverflow.com/users/6162078/tom-stein" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/ScholliYT" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
+                <!-- End .project-image -->
+                <div class="project-info">
+                    <h3>16x16 RGB LED Matrix</h3>
+                    <p>
+                        Diese Matrix wird von einem Teensy 3.6 mit 180MHz angesteuert. Zudem sind 3 TLC5940 LED Treiber ICs und 2 74CH595 Shiftregister verbaut.
+                        Die Matrix kann über das DMX Protokoll über WiFi gesteuert werden.
+                    </p>
+                    <a href="https://scholliyt.github.io/LED-Matrix-16x16/" target="_blank">Projekt anzeigen</a>
                 </div>
+                <!-- End .project-info -->
+            </div>
+            <!-- End .project -->
+
+            <div class="project shadow-large">
+                <div class="project-image">
+                    <img src="images/10x10RGBMatrix.png">
+                </div>
+                <!-- End .project-image -->
+                <div class="project-info">
+                    <h3>10x10 RGB LED Matrix</h3>
+                    <p>
+                        Diese Matrix wurde mit mit 5 74CH595 Shiftregistern gebaut, welche von einem Tennsy 3.6 mit 180MHz gesteuert werden. 
+                        Derzeit ist eine 8 bit Farbtiefe auf jeder LED möglich.
+                    </p>
+                    <a href="https://github.com/ScholliYT/LedMatirx/blob/master/10x10/LedMatrixBaseCode/LedMatrixBaseCode.ino" target="_blank">Projekt anzeigen</a>
+                </div>
+                <!-- End .project-info -->
+            </div>
+            <!-- End .project -->
+        </div>
+    </div>
+</div>
+<!-- End #projects -->
+
+<div id="skills">
+    <h2 class="heading">Fähigkeiten</h2>
+    <ul>
+        <li>Java</li>
+        <li>Android</li>
+        <li>Firebase</li>
+        <li>Flutter</li>
+        <li>C# (.Net)</li>
+        <li>Travis</li>
+        <li>Linux</li>
+        <li>Unity</li>
+        <li>Arduino (C/C++)</li>
+        <li>IoT</li>
+        <li>Raspberry Pi</li>
+        <li>Python</li>
+        <li>HTML</li>
+    </ul>
+</div>
+<!-- End #skills -->
+
+<div id="contact">
+    <h2>Kontakt</h2>
+    <div id="contact-form">
+        <form method="POST" action="https://formspree.io/tom.ein.stein@t-online.de">
+            <input type="hidden" name="_subject" value="Kontaktanfrage von tomstein.me" />
+            <input type="email" name="_replyto" placeholder="Email" required>
+            <textarea name="message" placeholder="Nachricht" required></textarea>
+            <button type="submit">Senden</button>
+        </form>
+    </div>
+    <!-- End #contact-form -->
+</div>
+<!-- End #contact -->
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5 copyright">
+                <p>
+                    Copyright &copy; 2018 Tom Stein
+                </p>
+            </div>
+            <div class="col-sm-2 top">
+                <span id="to-top">
+                    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                </span>
+            </div>
+            <div class="col-sm-5 social">
+                <ul>
+                    <li>
+                        <a href="https://github.com/ScholliYT" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://stackoverflow.com/users/6162078/tom-stein" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/ScholliYT" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </footer>
-    <!-- End footer -->
+    </div>
+</footer>
+<!-- End footer -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/scripts.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/scripts.min.js"></script>
 </body>
 
 </html>
