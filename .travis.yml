@@ -6,6 +6,9 @@ script:
   - pwd
   - ls
 after_success:
+  - echo "Checking master branch..."
+  - if [[ "$TRAVIS_BRANCH" != "master" ]]; then echo "We're not on the master branch.";  exit 0; fi
+  - echo "Starting deploymnet"
   - echo "${SFTP_PRIVATEKEY}" >/tmp/sftp_rsa
   - chmod 400 /tmp/sftp_rsa
   - sftp -i /tmp/sftp_rsa ${SFTP_USERNAME}@frey.lxnd.me
