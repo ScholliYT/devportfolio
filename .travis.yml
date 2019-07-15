@@ -1,0 +1,11 @@
+language: bash
+script:
+    - echo "Running deployment"
+    - pwd
+    - ls
+after_success:
+  - echo "${SFTP_PRIVATEKEY}" >/tmp/sftp_rsa
+  - sftp -i /tmp/sftp_rsa ${SFTP_USERNAME}@frey.lxnd.me
+  - ls
+  - exit
+  
