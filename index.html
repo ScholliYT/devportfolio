@@ -72,18 +72,18 @@
                 </div>
                 <div class="col-md-8">
                     <p id="info_text"></p>
-                       
-                  
+
+
                     <script type="text/javascript">
-                        function calculate_age(dob) { 
+                        function calculate_age(dob) {
                             var diff_ms = Date.now() - dob.getTime();
-                            var age_dt = new Date(diff_ms); 
+                            var age_dt = new Date(diff_ms);
 
                             return Math.abs(age_dt.getUTCFullYear() - 1970);
                         }
 
                         // In JavaScript, the first month (January) is month number 0, so December returns month number 11.
-                        document.getElementById("info_text").innerHTML = "Ich bin Student der Informatik an der TU Dortmund. Derzeit bin ich " + calculate_age(new Date(2001,1-1,8)) + " Jahre alt. Hobbymäßig arbeite ich für <a href=\"https://www.fantapptic.me/de\" target=\"_blank\">Fantapptic Apps</a>."  
+                        document.getElementById("info_text").innerHTML = "Ich bin Student der Informatik an der TU Dortmund. Derzeit bin ich " + calculate_age(new Date(2001, 1 - 1, 8)) + " Jahre alt. Hobbymäßig arbeite ich für <a href=\"https://www.fantapptic.me/de\" target=\"_blank\">Fantapptic Apps</a>."  
                     </script>
                 </div>
             </div>
@@ -98,7 +98,8 @@
                 <h3>ROBOCOM 2018</h3>
                 <h4>Programmierung, Bau</h4>
                 <p>
-                    Erfolgreiche Teilnahme an der <a href="https://www.w-hs.de/robocom-2018/" target="_blank">ROBOCOM 2018</a> (2. Platz) der Westfälischen Hochschule in Gelsenkirchen. 
+                    Erfolgreiche Teilnahme an der <a href="https://www.w-hs.de/robocom-2018/" target="_blank">ROBOCOM
+                        2018</a> (2. Platz) der Westfälischen Hochschule in Gelsenkirchen.
                 </p>
             </div>
 
@@ -106,7 +107,7 @@
                 <h3><a href="http://www.hkconsulting.de" target="_blank">HK Consulting GmbH</a></h3>
                 <h4>Unterstützung der Entwicklungsabteilung</h4>
                 <p>
-                    In dieser Zeit unterstützte ich die Entwicklungsabteilung der HK Consulting GmbH. 
+                    In dieser Zeit unterstützte ich die Entwicklungsabteilung der HK Consulting GmbH.
                     Zu den verwendeten Technologien zählen c#, .NET, WPF, SQL ...
                 </p>
             </div>
@@ -123,7 +124,8 @@
                 <h3>It-Talents</h3>
                 <h4>Rucksackproblem (I/O Knapsack)</h4>
                 <p>
-                    Entwicklung einer möglichen <a href="https://github.com/ScholliYT/Rucksackproblem" target="_blank">Lösung</a> für das I/O Knapsack Problem in Unity.
+                    Entwicklung einer möglichen <a href="https://github.com/ScholliYT/Rucksackproblem"
+                        target="_blank">Lösung</a> für das I/O Knapsack Problem in Unity.
                 </p>
             </div>
 
@@ -131,7 +133,7 @@
                 <h3>World robot Olympiad</h3>
                 <h4>Programmierung, Bau</h4>
                 <p>
-                    Teilnahme an der World robot Olympiad 2015 in Deutschland mit Erfolg bis ins Deutschlandfinale. 
+                    Teilnahme an der World robot Olympiad 2015 in Deutschland mit Erfolg bis ins Deutschlandfinale.
                 </p>
             </div>
         </div>
@@ -184,13 +186,35 @@
             <div class="row">
                 <div class="project shadow-large">
                     <div class="project-image">
+                        <img src="images/lora_top.jpg">
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>LoRa Sensor</h3>
+                        <p>
+                            Ein Arduino Uno verbunden mit einem LoRa Shield ermöglicht es Sensordaten über große
+                            Distanzen (mehere Kilometer) zu übertragen.
+                            In diesem Fall werden Daten von Licht-, Temperatur-, Feuchtigkeits-, Druck- und
+                            Höhenmessungen übertragen, welche durch einen
+                            <a
+                                href="https://www.exp-tech.de/sensoren/barometer/8819/bluedot-bme280-tsl2591-advanced-weather-station?c=1080">BME280
+                                + TSL2591</a> gemessen wurden.
+                        </p>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
                         <img src="images/LightTron.png">
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
                         <h3>LightTron 9000</h3>
                         <p>
-                            Eine LED Lampe basierend auf dem Gefäs: IKEA DROPPAR. Als Mikrocontroller wird ein ESP8266 verwendet, welcher sich mit dem WLAN verbindet. 
+                            Eine LED Lampe basierend auf dem Gefäs: IKEA DROPPAR. Als Mikrocontroller wird ein ESP8266
+                            verwendet, welcher sich mit dem WLAN verbindet.
                             Befehle können per MQTT an die Lampe gesendet werden.
                         </p>
                         <a href="https://imgur.com/a/a9eaA" target="_blank">Bilder anzeigen</a>
@@ -212,7 +236,8 @@
                             App zur Übersicht der Theoriestunden der Fahrschule Potjans.
                             Man kann also schnell und einfach übers Handy checken, wann man anzutreten hat.
                         </p>
-                        <a href="https://play.google.com/store/apps/details?id=me.fantapptic.potjansApp" target="_blank">Projekt anzeigen</a>
+                        <a href="https://play.google.com/store/apps/details?id=me.fantapptic.potjansApp"
+                            target="_blank">Projekt anzeigen</a>
                     </div>
                     <!-- End .project-info -->
                 </div>
@@ -227,7 +252,8 @@
                         <h3>Beleuchteter Headsethalter</h3>
                         <p>
                             Ein mit LEDs beleuchteter Halter für ein Headset / einen Kopfhörer.
-                            Zwischen den zwei Milchglasscheiben befinden sich WS2812B LEDs, welche von einem Ardunio nano angesteuert werden.
+                            Zwischen den zwei Milchglasscheiben befinden sich WS2812B LEDs, welche von einem Ardunio
+                            nano angesteuert werden.
                         </p>
                         <a href="https://imgur.com/a/90DKLLF" target="_blank">Projekt anzeigen</a>
                     </div>
@@ -243,121 +269,130 @@
                     <div class="project-info">
                         <h3>Drinko Plinko</h3>
                         <p>
-                        Der etwas andere Flaschenöffner :) </br>
-                        Der Kronkorken fällt durch durch mehere Ebenen und trifft in einem der unteren Fächer auf. 
-                    </p>
-                    <a href="https://imgur.com/a/JkRvDHt" target="_blank">Bilder anzeigen</a>
+                            Der etwas andere Flaschenöffner :) </br>
+                            Der Kronkorken fällt durch durch mehere Ebenen und trifft in einem der unteren Fächer auf.
+                        </p>
+                        <a href="https://imgur.com/a/JkRvDHt" target="_blank">Bilder anzeigen</a>
+                    </div>
+                    <!-- End .project-info -->
                 </div>
-                <!-- End .project-info -->
-            </div>
-            <!-- End .project -->
+                <!-- End .project -->
 
-            <div class="project shadow-large">
-                <div class="project-image">
-                    <img src="images/16x16RGBMatrix.png">
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/16x16RGBMatrix.png">
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>16x16 RGB LED Matrix</h3>
+                        <p>
+                            Diese Matrix wird von einem Teensy 3.6 mit 180MHz angesteuert. Zudem sind 3 TLC5940 LED
+                            Treiber ICs und 2 74CH595 Shiftregister verbaut.
+                            Die Matrix kann über das DMX Protokoll über WiFi gesteuert werden.
+                        </p>
+                        <a href="https://scholliyt.github.io/LED-Matrix-16x16/" target="_blank">Projekt anzeigen</a>
+                    </div>
+                    <!-- End .project-info -->
                 </div>
-                <!-- End .project-image -->
-                <div class="project-info">
-                    <h3>16x16 RGB LED Matrix</h3>
-                    <p>
-                        Diese Matrix wird von einem Teensy 3.6 mit 180MHz angesteuert. Zudem sind 3 TLC5940 LED Treiber ICs und 2 74CH595 Shiftregister verbaut.
-                        Die Matrix kann über das DMX Protokoll über WiFi gesteuert werden.
-                    </p>
-                    <a href="https://scholliyt.github.io/LED-Matrix-16x16/" target="_blank">Projekt anzeigen</a>
-                </div>
-                <!-- End .project-info -->
-            </div>
-            <!-- End .project -->
+                <!-- End .project -->
 
-            <div class="project shadow-large">
-                <div class="project-image">
-                    <img src="images/10x10RGBMatrix.png">
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/10x10RGBMatrix.png">
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>10x10 RGB LED Matrix</h3>
+                        <p>
+                            Diese Matrix wurde mit mit 5 74CH595 Shiftregistern gebaut, welche von einem Tennsy 3.6 mit
+                            180MHz gesteuert werden.
+                            Derzeit ist eine 8 bit Farbtiefe auf jeder LED möglich.
+                        </p>
+                        <a href="https://github.com/ScholliYT/LedMatirx/blob/master/10x10/LedMatrixBaseCode/LedMatrixBaseCode.ino"
+                            target="_blank">Projekt anzeigen</a>
+                    </div>
+                    <!-- End .project-info -->
                 </div>
-                <!-- End .project-image -->
-                <div class="project-info">
-                    <h3>10x10 RGB LED Matrix</h3>
-                    <p>
-                        Diese Matrix wurde mit mit 5 74CH595 Shiftregistern gebaut, welche von einem Tennsy 3.6 mit 180MHz gesteuert werden. 
-                        Derzeit ist eine 8 bit Farbtiefe auf jeder LED möglich.
-                    </p>
-                    <a href="https://github.com/ScholliYT/LedMatirx/blob/master/10x10/LedMatrixBaseCode/LedMatrixBaseCode.ino" target="_blank">Projekt anzeigen</a>
-                </div>
-                <!-- End .project-info -->
+                <!-- End .project -->
             </div>
-            <!-- End .project -->
         </div>
     </div>
-</div>
-<!-- End #projects -->
+    <!-- End #projects -->
 
-<div id="skills">
-    <h2 class="heading">Skills</h2>
-    <ul>
-        <li>Java</li>
-        <li>Android</li>
-        <li>Firebase</li>
-        <li>Flutter</li>
-        <li>C# (.Net)</li>
-        <li>Travis</li>
-        <li>Linux</li>
-        <li>Unity</li>
-        <li>Arduino (C/C++)</li>
-        <li>IoT</li>
-        <li>Raspberry Pi</li>
-        <li>Python</li>
+    <div id="skills">
+        <h2 class="heading">Skills</h2>
+        <ul>
+            <li>Java</li>
+            <li>Android</li>
+            <li>Firebase</li>
+            <li>Flutter</li>
+            <li>C# (.Net)</li>
+            <li>Travis</li>
+            <li>Linux</li>
+            <li>Unity</li>
+            <li>Arduino (C/C++)</li>
+            <li>IoT</li>
+            <li>Raspberry Pi</li>
+            <li>Python</li>
             <li>SQL</li>
-    </ul>
-</div>
-<!-- End #skills -->
-
-<div id="contact">
-    <h2>Kontakt</h2>
-    <div id="contact-form">
-        <form method="POST" action="https://formspree.io/mail@tomstein.me">
-            <input type="hidden" name="_subject" value="Kontaktanfrage von tomstein.me" />
-            <input type="email" name="_replyto" placeholder="Email" required>
-            <textarea name="message" placeholder="Nachricht" required></textarea>
-            <button type="submit">Senden</button>
-        </form>
+        </ul>
     </div>
-    <!-- End #contact-form -->
-</div>
-<!-- End #contact -->
+    <!-- End #skills -->
 
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-5 copyright">
-                <p>
-                    Copyright &copy; 2017<script>new Date().getFullYear()>2017&&document.write("-"+new Date().getFullYear());</script>, Tom Stein.<br>
-                    <a href="impressum.html">Impressum</a>
-                </p>
-            </div>
-            <div class="col-sm-2 top">
-                <span id="to-top">
-                    <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                </span>
-            </div>
-            <div class="col-sm-5 social">
-                <ul>
-                    <li>
-                        <a href="https://github.com/ScholliYT" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://stackoverflow.com/users/6162078/tom-stein" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/ScholliYT" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                </ul>
+    <div id="contact">
+        <h2>Kontakt</h2>
+        <div id="contact-form">
+            <form method="POST" action="https://formspree.io/mail@tomstein.me">
+                <input type="hidden" name="_subject" value="Kontaktanfrage von tomstein.me" />
+                <input type="email" name="_replyto" placeholder="Email" required>
+                <textarea name="message" placeholder="Nachricht" required></textarea>
+                <button type="submit">Senden</button>
+            </form>
+        </div>
+        <!-- End #contact-form -->
+    </div>
+    <!-- End #contact -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; 2017
+                        <script>new Date().getFullYear() > 2017 && document.write("-" + new Date().getFullYear());</script>
+                        ,
+                        Tom Stein.<br>
+                        <a href="impressum.html">Impressum</a>
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/ScholliYT" target="_blank"><i class="fa fa-github"
+                                    aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://stackoverflow.com/users/6162078/tom-stein" target="_blank"><i
+                                    class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/ScholliYT" target="_blank"><i class="fa fa-twitter"
+                                    aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
-<!-- End footer -->
+    </footer>
+    <!-- End footer -->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/scripts.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/scripts.min.js"></script>
 </body>
 
 </html>
