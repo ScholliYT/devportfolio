@@ -83,7 +83,8 @@
                         }
 
                         // In JavaScript, the first month (January) is month number 0, so December returns month number 11.
-                        document.getElementById("info_text").innerHTML = "Ich bin Student der Informatik an der TU Dortmund. Derzeit bin ich " + calculate_age(new Date(2001, 1 - 1, 8)) + " Jahre alt. Hobbymäßig arbeite ich für <a href=\"https://www.fantapptic.me/de\" target=\"_blank\">Fantapptic Apps</a>."  
+                        document.getElementById("info_text").innerHTML = "Ich bin " + calculate_age(new Date(2001, 0, 8)) + " Jahre alt und Student der Informatik an der TU Dortmund. " +
+                        "Neben dem Studium arbeite ich für die <a href=\"http://www.hkconsulting.de\" target=\"_blank\">HK Consulting GmbH</a>."  
                     </script>
                 </div>
             </div>
@@ -103,12 +104,12 @@
                 </p>
             </div>
 
-            <div data-date="März 2018">
+            <div data-date="seit März 2018">
                 <h3><a href="http://www.hkconsulting.de" target="_blank">HK Consulting GmbH</a></h3>
                 <h4>Unterstützung der Entwicklungsabteilung</h4>
                 <p>
-                    In dieser Zeit unterstützte ich die Entwicklungsabteilung der HK Consulting GmbH.
-                    Zu den verwendeten Technologien zählen c#, .NET, WPF, SQL ...
+                    Neben der Schule bzw. dem Studium unterstützte ich die Entwicklungsabteilung der HK Consulting GmbH.
+                    Zu den verwendeten Technologien zählen C#, .NET, WPF, SQL und C/C++ sowie die Entwicklung eingebetteter Systeme / IoT.
                 </p>
             </div>
 
@@ -143,8 +144,15 @@
     <div id="education">
         <h2 class="heading">Bildung</h2>
         <div class="education-block">
+            <h3>Technische Universität Dortmund</h3>
+            <span class="education-date">September 2019 - heute</span>
+            <h4>Bachelor of Science (B.Sc.) Informatik</h4>
+        </div>
+        <!-- End .education-block -->
+
+        <div class="education-block">
             <h3>Richard-von-Weizsäcker-Berufskolleg Dülmen</h3>
-            <span class="education-date">Juli 2016 - Juli 2019</span>
+            <span class="education-date">Juli 2016 - Juni 2019</span>
             <h4>Allgemeine Hochschulreife mit Schwerpunkt in Mathematik und Informatik</h4>
             <ul>
                 <li>
