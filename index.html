@@ -70,8 +70,12 @@
                 <div class="col-md-4">
                     <h2 class="heading">Über mich</h2>
                 </div>
-                <div class="col-md-8">
-                    <p id="info_text"></p>
+                <div class="col-md-8">  
+                    <p id="age_text">
+                        Hi,<br>
+                        ich bin Tom, {{AGE}} Jahre alt und <a href="#education">Student der Informatik an der TU Dortmund</a>.
+                        Neben dem Studium arbeite ich für die <a href="http://www.hkconsulting.de" target="_blank">HK Consulting GmbH</a>. In meiner Freizeit beschäftige ich mich gerne mit IoT und sonstigen neuen Technologien.
+                    </p>
 
 
                     <script type="text/javascript">
@@ -83,8 +87,9 @@
                         }
 
                         // In JavaScript, the first month (January) is month number 0, so December returns month number 11.
-                        document.getElementById("info_text").innerHTML = "Ich bin " + calculate_age(new Date(2001, 0, 8)) + " Jahre alt und Student der Informatik an der TU Dortmund. " +
-                        "Neben dem Studium arbeite ich für die <a href=\"http://www.hkconsulting.de\" target=\"_blank\">HK Consulting GmbH</a>."  
+                        var template = document.getElementById("age_text").innerHTML
+                        template = template.replace("{{AGE}}", calculate_age(new Date(2001, 0, 8)))
+                        document.getElementById("age_text").innerHTML = template
                     </script>
                 </div>
             </div>
