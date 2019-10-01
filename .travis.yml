@@ -14,6 +14,7 @@ after_success:
   - chmod 400 /tmp/sftp_rsa
   - echo "Uploading..."
   - scp -o "StrictHostKeyChecking no" -i /tmp/sftp_rsa index.html ${SFTP_USERNAME}@${SFTP_HOST}:/var/www/tomstein.me/index.html
+  - scp -o "StrictHostKeyChecking no" -i /tmp/sftp_rsa datenschutz.html ${SFTP_USERNAME}@${SFTP_HOST}:/var/www/tomstein.me/datenschutz.html
   - ssh -o "StrictHostKeyChecking no" -i /tmp/sftp_rsa scholli@${SFTP_HOST} "rm -rf /var/www/tomstein.me/css"
   - scp -o "StrictHostKeyChecking no" -i /tmp/sftp_rsa -r css ${SFTP_USERNAME}@${SFTP_HOST}:/var/www/tomstein.me/css
   - ssh -o "StrictHostKeyChecking no" -i /tmp/sftp_rsa scholli@${SFTP_HOST} "rm -rf /var/www/tomstein.me/images"
