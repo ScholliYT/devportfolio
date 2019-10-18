@@ -1,4 +1,7 @@
 language: bash
+branches:
+  only:
+    - master
 addons:
   ssh_known_hosts: ${SFTP_HOST}
 script:
