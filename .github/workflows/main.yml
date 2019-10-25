@@ -1,8 +1,5 @@
 name: Site Reliability
-on: [push]
-schedule:
-  # * is a special character in YAML so you have to quote this string
-  - cron:  '0 4 * * *' ]
+on: push
 jobs:
   crawl_for_broken_links:
     runs-on: ubuntu-latest
@@ -17,6 +14,8 @@ jobs:
     # Use the output from the `checking` step
     - name: Telegram Message Notify on Error
       uses: appleboy/telegram-action@0.0.5
+      if: failure()
+      id: notify_on_error_telegram
       env:
         TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
         TELEGRAM_TO: ${{ secrets.TELEGRAM_TO }}
