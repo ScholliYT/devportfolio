@@ -20,4 +20,4 @@ jobs:
         TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
         TELEGRAM_TO: ${{ secrets.TELEGRAM_TO }}
       with:
-        args: check for ${{ checking.website_url }} completed.
+        args: check for ${{ steps.checking.website_url }} completed.
