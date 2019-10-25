@@ -1,0 +1,19 @@
+name: Dead links crawler
+on:
+  push:
+    branches:
+    - master
+jobs:
+  crawl_for_broken_links:
+    runs-on: ubuntu-latest
+    name: A job to check for broken links
+    steps:
+    - name: Checking links step
+      id: checking
+      uses: ScholliYT/Broken-Links-Crawler-Action@v1.1.1
+      with:
+        website_url: 'https://tomstein.me/'
+        verbose: 'true'
+    # Use the output from the `checking` step
+    - name: Get the output time
+      run: echo "The time was ${{ steps.checking.outputs.time }}"
