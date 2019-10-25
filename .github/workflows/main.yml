@@ -1,19 +1,27 @@
-name: Dead links crawler
+name: Site Reliability
 on:
-  schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron:  '0 4 * * *'
+- push:
+  branches:
+  - master
+- schedule:
+  # * is a special character in YAML so you have to quote this string
+  - cron:  '0 4 * * *'
 jobs:
   crawl_for_broken_links:
     runs-on: ubuntu-latest
-    name: A job to check for broken links
+    name: Broken-Links-Crawler
     steps:
-    - name: Checking links step
+    - name: Checking links
       id: checking
       uses: ScholliYT/Broken-Links-Crawler-Action@v1.1.1
       with:
         website_url: 'https://tomstein.me/'
         verbose: 'true'
     # Use the output from the `checking` step
-    - name: Get the output time
-      run: echo "The time was ${{ steps.checking.outputs.time }}"
+    - name: Telegram Message Notify on Error
+      uses: appleboy/telegram-action@0.0.5
+      env:
+        TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+        TELEGRAM_TO: ${{ secrets.TELEGRAM_TO }}
+      with:
+        args: check for ${{ checking.website_url }} completed.
