@@ -1,8 +1,8 @@
 name: Dead links crawler
 on:
-  push:
-    branches:
-    - master
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 4 * * *'
 jobs:
   crawl_for_broken_links:
     runs-on: ubuntu-latest
