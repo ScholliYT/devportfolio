@@ -4,7 +4,7 @@ on:
     branches: master
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '0 4 * * *'
+    - cron:  '2 21 * * *'
 jobs:
   crawl_for_broken_links:
     runs-on: ubuntu-latest
