@@ -14,7 +14,6 @@ jobs:
       id: checking
       uses: ScholliYT/Broken-Links-Crawler-Action@v1.1.2
       with:
-        website_url: 'https://tomstein.me/'
         verbose: 'true'
     # Use the output from the `checking` step
     - name: Telegram Message Notify on Error
