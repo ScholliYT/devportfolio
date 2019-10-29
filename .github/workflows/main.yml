@@ -14,8 +14,9 @@ jobs:
       uses: hmarr/debug-action@v1.0.0
     - name: Checking links
       id: checking
-      uses: ScholliYT/Broken-Links-Crawler-Action@v1.1.3
+      uses: ScholliYT/Broken-Links-Crawler-Action@v1.1.4
       with:
+        website_url: 'https://tomstein.me'
         verbose: 'true'
     # Use the output from the `checking` step
     - name: Telegram Message Notify on Error
