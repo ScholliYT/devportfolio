@@ -14,7 +14,7 @@ jobs:
       uses: hmarr/debug-action@v1.0.0
     - name: Checking links
       id: checking
-      uses: ScholliYT/Broken-Links-Crawler-Action@v1.1.4
+      uses: ScholliYT/Broken-Links-Crawler-Action@v2.0.0
       with:
         website_url: 'https://tomstein.me'
         verbose: 'true'
