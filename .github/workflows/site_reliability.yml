@@ -19,6 +19,8 @@ jobs:
       with:
         website_url: 'https://tomstein.me'
         verbose: 'true'
+        max_retry_time: 30
+        max_retries: 5
     # Use the output from the `checking` step
     - name: Telegram Message Notify on Error
       uses: appleboy/telegram-action@0.0.5
