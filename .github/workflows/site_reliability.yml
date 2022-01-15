@@ -18,6 +18,7 @@ jobs:
       uses: ScholliYT/Broken-Links-Crawler-Action@v3
       with:
         website_url: 'https://tomstein.me'
+        exclude_url_prefix: 'mailto:,https://www.linkedin.com,https://linkedin.com'
         verbose: 'true'
         max_retry_time: 30
         max_retries: 5
