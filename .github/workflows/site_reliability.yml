@@ -25,7 +25,7 @@ jobs:
         max_retries: 5
     # Use the output from the `checking` step
     - name: Telegram Message Notify on Error
-      uses: appleboy/telegram-action@0.0.5
+      uses: appleboy/telegram-action@v0.1.1
       if: failure()
       id: notify_on_error_telegram
       env:
